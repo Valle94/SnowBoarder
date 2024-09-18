@@ -1,2 +1,6 @@
-# SnowBoarder
-The Unity game "Snow Boarder" created for the class CITA212
+# Snow Boarder
+
+**Changelog (In Class) 09/18/24**
+
+- Initial project setup
+- Adjusted GitIgnore
