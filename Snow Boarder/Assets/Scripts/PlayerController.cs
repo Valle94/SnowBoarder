@@ -18,11 +18,11 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.A))
         {
-            rb2d.AddTorque(torqueAmount);
+            rb2d.AddTorque(torqueAmount * Time.deltaTime);
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            rb2d.AddTorque(-torqueAmount);
+            rb2d.AddTorque(-torqueAmount * Time.deltaTime);
         }
     }
 }

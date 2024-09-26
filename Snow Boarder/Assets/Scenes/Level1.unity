@@ -305,7 +305,7 @@ Transform:
   m_GameObject: {fileID: 388477877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.85, y: -14.07, z: -0.53185695}
+  m_LocalPosition: {x: 189, y: -44.6, z: -0.53185695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
   m_XDamping: 0.5
-  m_YDamping: 1
+  m_YDamping: 0.5
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.3
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 941897101}
   - component: {fileID: 941897103}
   - component: {fileID: 941897102}
-  - component: {fileID: 941897104}
+  - component: {fileID: 941897106}
   - component: {fileID: 941897105}
   m_Layer: 0
   m_Name: Agent
@@ -638,7 +638,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0.05
-  m_AngularDrag: 10
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -721,19 +721,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.05570654, y: -1.7368671}
   m_Size: {x: 2.848769, y: 0.20527247}
   m_Direction: 1
---- !u!114 &941897104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941897097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c0b38ba86868948a494bf3b9a9a3cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  torqueAmount: 14
 --- !u!114 &941897105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,6 +734,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadDelay: 0.5
+--- !u!114 &941897106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941897097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c0b38ba86868948a494bf3b9a9a3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueAmount: 500
 --- !u!1 &1306659892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,9 +1424,9 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: 15
+  m_Speed: 26
   m_SpeedVariation: 0
-  m_ForceScale: 0.1
+  m_ForceScale: 0.2
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
