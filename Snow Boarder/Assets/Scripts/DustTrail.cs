@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using TMPro;
+using UnityEngine.UI;
 
 public class DustTrail : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class DustTrail : MonoBehaviour
     [SerializeField] ParticleSystem longJump;
     [SerializeField] AudioClip longJumpSFX;
     [SerializeField] float airtime = 2f;
+    [SerializeField] TMP_Text airText;
     float hangtime = 0;
     bool airborn = false;
 
@@ -40,5 +43,6 @@ public class DustTrail : MonoBehaviour
         {
             hangtime += Time.deltaTime;
         }
+        airText.SetText("Hangtime: " + string.Format("{0:0.00}", hangtime));
     }
 }
